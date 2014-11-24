@@ -2,11 +2,18 @@
 
 <p>Logical ID: {{logicalId}}</p>
 <p>Status: {{status}}</p>
-<p>Start time: {{startTime}}</p>
-<p>End time: {{endTime}}</p>
+<p>Start time: {{properStartTime}}</p>
+<p>End time: {{properEndTime}}</p>
 <p>Product: {{productName}};{{productVersion}};{{productRevision}}</p>
 <p>Hostname: {{hostname}}</p>
 <p>Username: {{userName}}</p>
 
-
+<p>{{ tests.length }}</p>
+<table>
+{{#each test in tests}}
+    <tr>
+        <td>{{test.logicalId}}</td>
+    </tr>
+{{/each}}
+</table>
 
